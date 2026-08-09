@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Mrs+Saint+Delafield&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="countdown/default.css" />
+    <script src="countdown/simplyCountdown.umd.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- WADAH LIGHTBOX (Pop-up Gambar Besar) -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img
+        id="lightbox-img"
+        class="lightbox-content"
+        src=""
+        alt="Perbesar Foto"
+      />
+    </div>
+
+    <div id="wadah-utama">
+      <!-- SECTION 1: SAMPUL -->
+      <section class="sampul" id="sampul">
+        <p class="sampul-title">Undangan Pernikahan</p>
+
+        <div class="info-mempelai">
+          <h1>Bima & Vina</h1>
+          <p>18 · 05 · 2029</p>
+        </div>
+
+        <div class="tamu-undangan">
+          <p>
+            Kepada Yth.<br />
+            <!-- ID ditambahkan di sini untuk manipulasi JS -->
+            <span id="nama-tamu">Bapak/Ibu/Saudara/i</span>
+          </p>
+        </div>
+
+        <button type="button" class="seal-btn" id="seal-btn">
+          Buka Undangan
+        </button>
+      </section>
+
+      <!-- SECTION 2: ISI UNDANGAN (HERO / MEMPELAI) -->
+      <section class="hero" id="hero">
+        <p class="hero-sub animasi-scroll">Kedua Mempelai</p>
+        <h2 class="hero-title animasi-scroll">Yang Berbahagia</h2>
+
+        <div class="couple__grid">
+          <!-- Mempelai Wanita -->
+          <div class="reveal animasi-scroll">
+            <div class="couple-img">
+              <img src="img/vina.jpeg" alt="Foto Mempelai Wanita" />
+            </div>
+            <h3 class="couple__name">Vina</h3>
+            <p class="couple__desc">
+              Putri Pertama dari<br />Bapak Saripudin &amp; Ibu Ulen Mawar Desa
+            </p>
+          </div>
+
+          <span class="heart animasi-scroll"
+            ><i class="bi bi-heart-fill"></i
+          ></span>
+
+          <!-- Mempelai Pria -->
+          <div class="reveal animasi-scroll">
+            <div class="couple-img">
+              <img src="img/bima.jpeg" alt="Foto Mempelai Pria" />
+            </div>
+            <h3 class="couple__name">Bima Age Septian</h3>
+            <p class="couple__desc">
+              Putra pertama dari<br />Bapak Suroto &amp; Ibu Suryana
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <p class="hero-sub animasi-scroll">Hitung Mundur</p>
+        <h2 class="hero-title animasi-scroll">Menuju Hari Bahagia</h2>
+        <div class="simply-countdown animasi-scroll"></div>
+      </section>
+
+      <!-- SECTION 3: RANGKAIAN ACARA -->
+      <section class="section" id="acara">
+        <p class="hero-sub animasi-scroll">Rangkaian Acara</p>
+        <h2 class="hero-title animasi-scroll">Akad & Resepsi</h2>
+
+        <div class="acara-container">
+          <!-- Bagian Akad -->
+          <div class="acara-item animasi-scroll">
+            <h3 class="acara-title">Akad Nikah</h3>
+
+            <div class="acara-detail">
+              <p class="acara-date">Senin, 5 Mei 2029</p>
+              <p class="acara-time">Pukul 08:00 - 10:00 WIB</p>
+              <p class="acara-location">
+                <strong>Kediaman Mempelai Wanita</strong><br />
+                Parit Culum 1, RT 00, RW 00
+              </p>
+            </div>
+
+            <a
+              class="btn-lokasi-elegan"
+              href="https://www.google.com/maps/search/?api=1&query=Jl.+Melati+No.+12+Jakarta+Selatan"
+              target="_blank"
+              rel="noopener"
+            >
+              Lihat Lokasi Acara
+            </a>
+          </div>
+
+          <!-- Garis Pemisah Elegan -->
+          <div class="acara-divider animasi-scroll"></div>
+
+          <!-- Bagian Resepsi -->
+          <div class="acara-item animasi-scroll">
+            <h3 class="acara-title">Resepsi</h3>
+
+            <div class="acara-detail">
+              <p class="acara-date">Senin, 5 Mei 2029</p>
+              <p class="acara-time">Pukul 11:00 - Selesai</p>
+              <p class="acara-location">
+                <strong>Kediaman Mempelai Wanita</strong><br />
+                Parit Culum 1, RT 00, RW 00
+              </p>
+            </div>
+
+            <a
+              class="btn-lokasi-elegan"
+              href="https://www.google.com/maps/search/?api=1&query=Jl.+Melati+No.+12+Jakarta+Selatan"
+              target="_blank"
+              rel="noopener"
+            >
+              Lihat Lokasi Acara
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: KISAH CINTA (TIMELINE) -->
+      <section class="section section--alt" id="cerita-kita">
+        <p class="hero-sub animasi-scroll">Kisah Kami</p>
+        <h2 class="hero-title animasi-scroll">Perjalanan Cinta</h2>
+
+        <div class="timeline">
+          <!-- Cerita 1 -->
+          <div class="timeline-item animasi-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tanggal">Desember 2025</div>
+            <div class="timeline-konten">
+              <h3>Pertama Bertemu</h3>
+              <img
+                src="img/perjalanan/9.jpeg"
+                alt="Pertama Bertemu"
+                class="timeline-img"
+              />
+              <p>
+                Berawal dari pertemuan yang tidak disengaja di sebuah acara,
+                kami mulai saling mengenal dan bertukar kontak.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cerita 2 -->
+          <div class="timeline-item animasi-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tanggal">Januari 2027</div>
+            <div class="timeline-konten">
+              <h3>Menjalin Kasih</h3>
+              <img
+                src="img/perjalanan/8.jpeg"
+                alt="Menjalin Kasih"
+                class="timeline-img"
+              />
+              <p>
+                Setelah sekian lama berteman dekat dan merasa cocok, akhirnya
+                kami memutuskan untuk melangkah ke jenjang yang lebih serius.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cerita 3 -->
+          <div class="timeline-item animasi-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tanggal">Oktober 2028</div>
+            <div class="timeline-konten">
+              <h3>Lamaran</h3>
+              <img
+                src="img/perjalanan/10.jpeg"
+                alt="Lamaran"
+                class="timeline-img"
+              />
+              <p>
+                Dengan restu kedua orang tua, kami melangsungkan acara lamaran
+                sederhana yang penuh dengan kehangatan keluarga.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: GALERI FOTO -->
+      <section class="section" id="galeri">
+        <p class="hero-sub animasi-scroll">Momen Bahagia</p>
+        <h2 class="hero-title animasi-scroll">Galeri Foto</h2>
+
+        <div class="galeri-grid">
+          <div class="galeri-item full animasi-scroll">
+            <img src="img/galeri/1.jpeg" alt="Galeri 1" class="galeri-img" />
+          </div>
+          <div class="galeri-item animasi-scroll">
+            <img src="img/galeri/2.jpeg" alt="Galeri 2" class="galeri-img" />
+          </div>
+          <div class="galeri-item animasi-scroll">
+            <img src="img/galeri/3.jpeg" alt="Galeri 3" class="galeri-img" />
+          </div>
+          <div class="galeri-item full animasi-scroll">
+            <img src="img/galeri/5.jpeg" alt="Galeri 4" class="galeri-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: RSVP & BUKU TAMU -->
+      <section class="section section--alt" id="rsvp">
+        <p class="hero-sub animasi-scroll">Kehadiran & Doa</p>
+        <h2 class="hero-title animasi-scroll">Buku Tamu</h2>
+
+        <div class="rsvp-container animasi-scroll">
+          <form
+            id="rsvp-form"
+            class="rsvp-form"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbwA1ntLOvsNCzae775cFHeKKBYyc-pQ9nJVT_DNkZW6KJ8bUSXD3F9--IzHRvMWI18v/exec"
+          >
+            <div class="form-group">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                class="form-control"
+                placeholder="Tulis nama Anda..."
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Konfirmasi Kehadiran</label>
+              <div class="radio-group">
+                <label class="radio-chip">
+                  Hadir
+                  <input type="radio" name="Kehadiran" value="Hadir" checked />
+                </label>
+                <label class="radio-chip">
+                  Tidak Hadir
+                  <input type="radio" name="Kehadiran" value="Tidak Hadir" />
+                </label>
+                <label class="radio-chip">
+                  Masih Ragu
+                  <input type="radio" name="Kehadiran" value="Masih Ragu" />
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group" id="grup-jumlah">
+              <label for="rsvpGuests" class="form-label">Jumlah Tamu</label>
+              <input
+                type="number"
+                id="rsvpGuests"
+                name="Jumlah"
+                class="form-control"
+                min="1"
+                max="10"
+                value="1"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="ucapan" class="form-label">Ucapan & Doa</label>
+              <textarea
+                id="ucapan"
+                class="form-control"
+                name="Ucapan"
+                rows="4"
+                placeholder="Tuliskan doa dan harapan untuk kedua mempelai..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-rsvp">Kirim Konfirmasi</button>
+          </form>
+        </div>
+
+        <div class="guestbook-container animasi-scroll">
+          <h3 class="guestbook-title">Harapan & Doa Mereka</h3>
+          <div class="guestbook-list" id="guestbook-list">
+            <!-- Komentar dari Google Sheet akan dimuat di sini -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: TANDA KASIH (AMPLOP DIGITAL) -->
+      <section class="section" id="tanda-kasih">
+        <p class="hero-sub animasi-scroll">Tanda Kasih</p>
+        <h2 class="hero-title animasi-scroll">Amplop Digital</h2>
+
+        <p class="gift-intro animasi-scroll">
+          Doa restu Bapak/Ibu/Saudara/i adalah hadiah yang paling berarti. Namun
+          jika ingin memberi tanda kasih, kami sediakan:
+        </p>
+
+        <div class="gift-container">
+          <!-- KARTU 1: BANK BRI -->
+          <div class="gift-card-minimal animasi-scroll">
+            <div class="gift-info">
+              <span class="gift-bank-name">Bank BRI</span>
+              <span class="gift-rek-num" id="rek-bca">1234 5678 90</span>
+              <span class="gift-owner">a.n. Vina</span>
+            </div>
+            <button
+              class="btn-salin-minimal"
+              onclick="salinRekening('rek-bca', this)"
+            >
+              Salin
+            </button>
+          </div>
+
+          <!-- KARTU 2: BANK MANDIRI -->
+          <div class="gift-card-minimal animasi-scroll">
+            <div class="gift-info">
+              <span class="gift-bank-name">Bank Mandiri</span>
+              <span class="gift-rek-num" id="rek-mandiri">9876 5432 10</span>
+              <span class="gift-owner">a.n. Bima Age Septian</span>
+            </div>
+            <button
+              class="btn-salin-minimal"
+              onclick="salinRekening('rek-mandiri', this)"
+            >
+              Salin
+            </button>
+          </div>
+
+          <!-- KARTU 3: QRIS -->
+          <div class="gift-card-minimal qris-card animasi-scroll">
+            <span class="gift-bank-name">QRIS Tanda Kasih</span>
+
+            <div class="qris-wrapper-minimal">
+              <img
+                src="https://dummyimage.com/300x300/ffffff/a8645a&text=Foto+QRIS"
+                alt="QRIS"
+                class="qris-img-minimal"
+              />
+            </div>
+            <span class="gift-owner">Atas nama Vina / Bima</span>
+          </div>
+        </div>
+
+        <div class="thnks animasi-scroll">
+          <div class="divider-ftr"></div>
+          <p class="hero-sub">Terima Kasih</p>
+          <span>Atas doa dan restu yang diberikan</span>
+          <h2>Bima & Vina</h2>
+        </div>
+      </section>
+
+      <!-- WADAH AUDIO -->
+      <div id="audio-container">
+        <!-- Autoplay dihapus agar sesuai kebijakan browser modern -->
+        <audio id="song" loop>
+          <source
+            src="audio/Penjaga Hati - Nadhif Basalamah _ Instrumental.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+
+        <div class="audio-icon-wrapper" id="audio-icon">
+          <i class="bi bi-disc"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+      // ==========================================
+      // FITUR BUKA SAMPUL & KONTROL MUSIK
+      // ==========================================
+      const tombolBuka = document.getElementById("seal-btn");
+      const sampul = document.getElementById("sampul");
+
+      const lagu = document.getElementById("song");
+      const ikonAudio = document.getElementById("audio-icon");
+      const ikonSimbol = ikonAudio.querySelector("i");
+      let isPlaying = false;
+
+      tombolBuka.addEventListener("click", function () {
+        sampul.classList.add("hilang");
+        // Gunakan overflowY agar tidak bisa digeser ke samping
+        document.body.style.overflowY = "auto";
+
+        ikonAudio.style.display = "flex";
+        lagu.volume = 0.3; // Atur volume 30%
+
+        lagu.play().catch(function (error) {
+          console.log(
+            "Autoplay dicegah oleh browser, tunggu interaksi user selanjutnya",
+          );
+        });
+        isPlaying = true;
+        ikonAudio.classList.add("putar");
+      });
+
+      ikonAudio.addEventListener("click", function () {
+        if (isPlaying) {
+          lagu.pause();
+          ikonAudio.classList.remove("putar");
+          ikonSimbol.classList.remove("bi-disc");
+          ikonSimbol.classList.add("bi-pause-circle");
+        } else {
+          lagu.play();
+          ikonAudio.classList.add("putar");
+          ikonSimbol.classList.remove("bi-pause-circle");
+          ikonSimbol.classList.add("bi-disc");
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2030,
+        month: 11,
+        day: 7,
+        hours: 8,
+        minutes: 0,
+        seconds: 0,
+        words: {
+          days: { root: "Hari", lambda: (root, n) => root },
+          hours: { root: "Jam", lambda: (root, n) => root },
+          minutes: { root: "Menit", lambda: (root, n) => root },
+          seconds: { root: "Detik", lambda: (root, n) => root },
+        },
+        removeZeroUnits: true,
+      });
+    </script>
+
+    <script>
+      // ==========================================
+      // FITUR LIGHTBOX GALERI FOTO
+      // ==========================================
+      const galeriImages = document.querySelectorAll(".galeri-img");
+      const popUpLightbox = document.getElementById("lightbox");
+      const gambarLightbox = document.getElementById("lightbox-img");
+      const tombolTutup = document.querySelector(".lightbox-close");
+
+      galeriImages.forEach((img) => {
+        img.addEventListener("click", function () {
+          gambarLightbox.src = this.src;
+          popUpLightbox.classList.add("tampil");
+          document.body.style.overflowY = "hidden";
+        });
+      });
+
+      function tutupLightbox() {
+        popUpLightbox.classList.remove("tampil");
+        document.body.style.overflowY = "auto";
+      }
+
+      tombolTutup.addEventListener("click", tutupLightbox);
+
+      popUpLightbox.addEventListener("click", function (e) {
+        if (e.target === popUpLightbox) {
+          tutupLightbox();
+        }
+      });
+    </script>
+
+    <script>
+      // ==========================================
+      // FITUR RSVP & GUESTBOOK (GOOGLE SHEETS)
+      // ==========================================
+      const formRsvp = document.getElementById("rsvp-form");
+      const guestbookList = document.getElementById("guestbook-list");
+      const urlScriptDb =
+        "https://script.google.com/macros/s/AKfycbwA1ntLOvsNCzae775cFHeKKBYyc-pQ9nJVT_DNkZW6KJ8bUSXD3F9--IzHRvMWI18v/exec";
+
+      function muatKomentar() {
+        guestbookList.innerHTML =
+          '<p style="text-align:center; color:var(--mahogany-soft); font-size: 13px;">Sedang memuat doa & harapan...</p>';
+
+        fetch(urlScriptDb)
+          .then((response) => response.json())
+          .then((data) => {
+            guestbookList.innerHTML = "";
+            data.reverse().forEach((item) => {
+              const namaTamu = item.nama || item.Nama || "Tamu Undangan";
+              const kehadiranTamu = item.Kehadiran || "Hadir";
+              const ucapanTamu = item.Ucapan || "";
+
+              let badgeClass =
+                kehadiranTamu === "Hadir" ? "badge-hadir" : "badge-absen";
+
+              const elemenKomentar = `
+                <div class="guestbook-item" style="animation: fade-in 0.5s ease;">
+                  <div class="guestbook-header">
+                    <span class="guestbook-name">${namaTamu}</span>
+                    <span class="${badgeClass}">${kehadiranTamu}</span>
+                  </div>
+                  <p class="guestbook-text">${ucapanTamu}</p>
+                </div>
+              `;
+              guestbookList.innerHTML += elemenKomentar;
+            });
+          })
+          .catch((error) => {
+            guestbookList.innerHTML =
+              '<p style="text-align:center; color:red; font-size: 13px;">Gagal memuat data. Silakan muat ulang halaman.</p>';
+          });
+      }
+
+      window.addEventListener("load", muatKomentar);
+
+      formRsvp.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const btnSubmit = formRsvp.querySelector('button[type="submit"]');
+        const teksAsli = btnSubmit.innerHTML;
+        btnSubmit.innerHTML = "Mengirim...";
+        btnSubmit.disabled = true;
+
+        const data = new FormData(formRsvp);
+        const action = e.target.action;
+
+        const namaInput = document.getElementById("nama").value;
+        const ucapanInput = document.getElementById("ucapan").value;
+        let kehadiranInput = "Hadir";
+        document
+          .querySelectorAll('input[name="Kehadiran"]')
+          .forEach((radio) => {
+            if (radio.checked) kehadiranInput = radio.value;
+          });
+
+        let badgeClass =
+          kehadiranInput === "Hadir" ? "badge-hadir" : "badge-absen";
+
+        const komentarBaru = `
+          <div class="guestbook-item" style="animation: fade-in 0.5s ease; border-left: 3px solid var(--rose);">
+            <div class="guestbook-header">
+              <span class="guestbook-name">${namaInput}</span>
+              <span class="${badgeClass}">${kehadiranInput}</span>
+            </div>
+            <p class="guestbook-text">${ucapanInput}</p>
+          </div>
+        `;
+
+        guestbookList.insertAdjacentHTML("afterbegin", komentarBaru);
+
+        fetch(action, {
+          method: "POST",
+          body: data,
+        })
+          .then(() => {
+            formRsvp.reset();
+            btnSubmit.innerHTML = teksAsli;
+            btnSubmit.disabled = false;
+          })
+          .catch(() => {
+            alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
+            btnSubmit.innerHTML = teksAsli;
+            btnSubmit.disabled = false;
+          });
+      });
+    </script>
+
+    <script>
+      // ==========================================
+      // FITUR SALIN NOMOR REKENING
+      // ==========================================
+      function salinRekening(idElemen, tombolElemen) {
+        const noRekening = document.getElementById(idElemen).innerText;
+
+        navigator.clipboard
+          .writeText(noRekening)
+          .then(() => {
+            const teksAsli = tombolElemen.innerHTML;
+            tombolElemen.innerHTML = "Tersalin";
+            tombolElemen.style.backgroundColor = "var(--rose-deep)";
+            tombolElemen.style.color = "var(--ivory)";
+            tombolElemen.style.borderColor = "var(--rose-deep)";
+
+            setTimeout(() => {
+              tombolElemen.innerHTML = teksAsli;
+              tombolElemen.style.backgroundColor = "transparent";
+              tombolElemen.style.color = "var(--rose-deep)";
+              tombolElemen.style.borderColor = "rgba(201, 143, 130, 0.5)";
+            }, 2000);
+          })
+          .catch((err) => {
+            alert("Gagal menyalin. Silakan salin manual.");
+          });
+      }
+    </script>
+
+    <script>
+      // ==========================================
+      // FITUR NAMA TAMU OTOMATIS (DARI URL)
+      // ==========================================
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("n");
+      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
+
+      const namaContainer = document.getElementById("nama-tamu");
+      const inputNamaRsvp = document.getElementById("nama");
+
+      if (nama) {
+        namaContainer.innerText = `${pronoun} ${nama}`;
+
+        // Opsional: Otomatis mengisi form RSVP jika parameternya ada
+        if (inputNamaRsvp) {
+          inputNamaRsvp.value = nama;
+        }
+      }
+    </script>
+
+    <script>
+      // ==========================================
+      // FITUR ANIMASI SAAT DI-SCROLL
+      // ==========================================
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.15,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("tampil");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const elemenAnimasi = document.querySelectorAll(".animasi-scroll");
+      elemenAnimasi.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
