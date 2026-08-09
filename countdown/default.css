@@ -1,0 +1,52 @@
+/**
+* Project : simply-countdown
+* File : simplyCountdown.theme.default
+* Author : Vincent Loy <vincent.loy1@gmail.com>
+* Theme : Light Modern
+*/
+
+.simply-countdown {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Playfair Display", serif;
+  margin: 20px auto 0;
+  max-width: 360px;
+}
+
+.simply-countdown > .simply-section {
+  width: 75px;
+  height: 75px;
+  padding: 14px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  background: var(--ivory);
+  border: 1px solid rgba(201, 166, 107, 0.4);
+  border-radius: var(--radius-md);
+}
+
+.simply-countdown > .simply-section > div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  align-items: center;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.simply-countdown > .simply-section .simply-word {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mahogany-soft);
+  margin-top:10px;
+  font-family: "Jost", sans-serif;
+}
