@@ -25,6 +25,7 @@ body {
   color: var(--mahogany); /* Warna teks abu-abu gelap agar nyaman dibaca */
   text-align: center; /* Membuat semua teks rata tengah */
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 #wadah-utama {
@@ -33,6 +34,7 @@ body {
   margin: 0 auto;
   background-color: var(--ivory);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  overflow-x: hidden;
 }
 
 /* 2. Mengatur Layout Section Sampul */
